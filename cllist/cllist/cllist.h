@@ -1,3 +1,10 @@
+/*****************************************************************//**
+ * \file   cllist.h
+ * \brief  
+ * 
+ * \author Miller K.
+ * \date   October 2024
+ *********************************************************************/
 
 #pragma once
 #pragma once
@@ -25,19 +32,73 @@ typedef struct _CLLIST {
 
 } cllist;
 
+/**
+ * @brief creates a circularly linked list.
+ * @param destroyFunc Pointer to a function that properly destroys data stored in a cllNode.
+ * @param compareFunc Pointer to a function that properly compares data stored in two cllNodes.
+ * @param retList Pointer to a pointer to the cllist that is created.
+ * @returns 0 on failure, 1 on success
+ */
+INT cllCreate(destroyData* destroyFunc, compareData* compareFunc, cllist** retList);
 
-INT cllCreate(cllist* list, destroyData* destroyFunc, compareData* compareFunc);
 
+/**
+ * @brief creates a circularly linked list.
+ * @param destroyFunc Pointer to a function that properly destroys data stored in a cllNode.
+ * @param compareFunc Pointer to a function that properly compares data stored in two cllNodes.
+ * @param retList Pointer to a pointer to the cllist that is created.
+ * @returns 0 on failure, 1 on success
+ */
 INT cllGet(cllist* list, cllNode* retData);
 
+
+/**
+ * @brief creates a circularly linked list.
+ * @param destroyFunc Pointer to a function that properly destroys data stored in a cllNode.
+ * @param compareFunc Pointer to a function that properly compares data stored in two cllNodes.
+ * @param retList Pointer to a pointer to the cllist that is created.
+ * @returns 0 on failure, 1 on success
+ */
 INT cllSort(cllist* list);
 
+
+/**
+ * @brief creates a circularly linked list.
+ * @param destroyFunc Pointer to a function that properly destroys data stored in a cllNode.
+ * @param compareFunc Pointer to a function that properly compares data stored in two cllNodes.
+ * @param retList Pointer to a pointer to the cllist that is created.
+ * @returns 0 on failure, 1 on success
+ */
 INT cllRemove(cllist* list, void * retData);
 
+
+/**
+ * @brief creates a circularly linked list.
+ * @param destroyFunc Pointer to a function that properly destroys data stored in a cllNode.
+ * @param compareFunc Pointer to a function that properly compares data stored in two cllNodes.
+ * @param retList Pointer to a pointer to the cllist that is created.
+ * @returns 0 on failure, 1 on success
+ */
 INT cllInsert(cllist* list);
 
+
+/**
+ * @brief creates a circularly linked list.
+ * @param destroyFunc Pointer to a function that properly destroys data stored in a cllNode.
+ * @param compareFunc Pointer to a function that properly compares data stored in two cllNodes.
+ * @param retList Pointer to a pointer to the cllist that is created.
+ * @returns 0 on failure, 1 on success
+ */
 INT cllClear(cllist* list);
 
+
+/**
+ * @brief creates a circularly linked list.
+ * @param destroyFunc Pointer to a function that properly destroys data stored in a cllNode.
+ * @param compareFunc Pointer to a function that properly compares data stored in two cllNodes.
+ * @param retList Pointer to a pointer to the cllist that is created.
+ * @returns 0 on failure, 1 on success
+ */
 INT cllDestroy(cllist* list);
 
 
