@@ -49,5 +49,5 @@ UINT8 cllDestroy(cllist* list)
 }
 
 
-// End of cllist.h
+// End of cllist.c
 
